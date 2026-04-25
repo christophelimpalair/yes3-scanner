@@ -267,8 +267,7 @@ for bucket in bucket_listing:
             blocked_encryption = blocked_encryption_types['EncryptionType'][0]
 
             if "SSE-C" in blocked_encryption:
-                #Bucket Blocks SSE-C Encryption
-                continue
+                pass  #Bucket Blocks SSE-C Encryption - continue remaining checks
             elif "NONE" in blocked_encryption:
                 add_to_bucket_summary("BucketNotSSECBlocked", bucket_name)
                 #Bucket does not block SSE-C Encryption
